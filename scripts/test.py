@@ -1,2 +1,2 @@
 import os
-print(os.path.exists("Customer_Personality_Analysis\data\raw\marketing_campaign.csv"))
+print(os.path.exists("data/raw/marketing_campaign.csv"))

@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 # Load the dataset
-df = pd.read_csv("data/raw/marketing_campaign.csv", sep="\t")
+df = pd.read_csv(r"C:\Users\doshi\Desktop\Data analyst projects\Customer_Personality_Analysis\data\raw\marketing_campaign.csv", sep="\t")
 
 # Preview the data
 print("Initial Shape:", df.shape)
@@ -24,7 +24,8 @@ print("\nMissing values:\n", nulls[nulls > 0])
 df = df.dropna(subset=["income"])  # Drop rows where income is missing
 
 # Step 5: Convert date column
-df["dt_customer"] = pd.to_datetime(df["dt_customer"])
+df["dt_customer"] = pd.to_datetime(df["dt_customer"], dayfirst=True)
+
 
 # Step 6: Create new columns
 df["age"] = 2024 - df["year_birth"]
@@ -45,3 +46,6 @@ os.makedirs("data/clean", exist_ok=True)
 df.to_csv("data/clean/marketing_campaign_clean.csv", index=False)
 
 print("\n✅ Cleaning completed. Cleaned dataset saved to 'data/clean/marketing_campaign_clean.csv'")
+
+print(pd.to_datetime(df["dt_customer"], dayfirst=True).head())
+
