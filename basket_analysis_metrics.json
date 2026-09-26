@@ -1,0 +1,12 @@
+{
+  "top_affinity_pair": [
+    "MntWines",
+    "MntMeatProducts"
+  ],
+  "affinity_score": 0.76,
+  "baseline_aov": 67.98,
+  "projected_aov": 85.28,
+  "aov_uplift": 17.3,
+  "aov_uplift_pct": 25.5,
+  "bundle_target_segment_size": 241
+}

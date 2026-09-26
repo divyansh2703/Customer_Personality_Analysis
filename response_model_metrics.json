@@ -1,0 +1,7 @@
+{
+  "roc_auc": 0.876,
+  "baseline_conversion_rate_pct": 22.1,
+  "targeted_conversion_rate_pct": 77.9,
+  "lift_x": 3.52,
+  "customers_targeted": 551
+}
